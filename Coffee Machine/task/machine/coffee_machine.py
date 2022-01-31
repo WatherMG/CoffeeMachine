@@ -6,11 +6,11 @@ machine_supplies = {"water": 400, "milk": 540, "beans": 120, "cups": 9, "money":
 
 def interface():
     print("The coffee machine has:")
-    print(f"{machine_supplies['water']} of water")
-    print(f"{machine_supplies['milk']} of milk")
-    print(f"{machine_supplies['beans']} of coffee beans")
-    print(f"{machine_supplies['cups']} of disposable cups")
-    print(f"{machine_supplies['money']} of money")
+    print(f"{machine_supplies.get('water')} of water")
+    print(f"{machine_supplies.get('milk')} of milk")
+    print(f"{machine_supplies.get('beans')} of coffee beans")
+    print(f"{machine_supplies.get('cups')} of disposable cups")
+    print(f"{machine_supplies.get('money')} of money")
 
 
 def fill_supplies():
@@ -27,7 +27,7 @@ def fill_supplies():
 
 
 def take_money():
-    print(f"I gave you ${machine_supplies['money']}")
+    print(f"I gave you ${machine_supplies.get('money')}")
     machine_supplies['money'] = 0
     print()
     interface()
